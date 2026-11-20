@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Натяжные потолки без посредников в Москве | Собственное производство — от 350 ₽/м²</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: #2563eb;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- Шапка -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center gap-2">
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-black text-base sm:text-lg tracking-tight text-slate-900" id="brand-name">ПОТОЛКИ БЕЗ ПОСРЕДНИКОВ</span>
+                    <span class="hidden sm:inline-flex items-center gap-1 bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-bold px-2 py-0.5 rounded-full">
+                        ★ 4.9 (481 отзыв)
+                    </span>
+                </div>
+                <div class="text-[11px] sm:text-xs text-slate-500" id="brand-city">Москва (Новогиреево, Перово, вся МО) • Опыт 10+ лет</div>
+            </div>
+            <div class="text-right shrink-0">
+                <a href="tel:+79990000000" id="brand-phone-link" class="font-extrabold text-sm sm:text-base text-slate-900 hover:text-blue-600 transition block">+7 (999) 000-00-00</a>
+                <div class="text-[11px] text-emerald-600 font-semibold flex items-center justify-end gap-1">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 08:00–21:00 без выходных
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <main class="max-w-5xl mx-auto px-4 py-6 sm:py-9">
+        <div class="text-center max-w-3xl mx-auto mb-7">
+            <div class="inline-flex flex-wrap justify-center gap-2 mb-3">
+                <span class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">Собственное производство</span>
+                <span class="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">Замер сегодня — монтаж ЗАВТРА</span>
+                <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full">Официальный договор с печатью</span>
+            </div>
+            <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-3 leading-tight">
+                Натяжные потолки от производителя <span class="text-blue-600">от 350 ₽/м²</span> в Москве
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base">
+                Рассчитайте точную смету за 30 секунд. Цена фиксируется на замере и <span class="font-bold text-slate-900">не меняется</span>. При расчете онлайн — подарок на выбор и доп. скидка 1 000 ₽.
+            </p>
+        </div>
+
+        <!-- Карточка калькулятора -->
+        <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/70 border border-slate-200/80 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+            
+            <!-- Левая часть: Параметры -->
+            <div class="p-5 sm:p-7 lg:col-span-7 space-y-6 border-b lg:border-b-0 lg:border-r border-slate-100">
+                
+                <!-- 1. Тип потолка (из прайса исполнителя) -->
+                <div>
+                    <label class="block text-sm font-extrabold text-slate-800 mb-2.5">1. Выберите тип потолка</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="material-options">
+                        <button type="button" data-price="355" data-discount="0" data-name="Классический ПВХ (матовый/сатин/глянец)" class="mat-btn border-2 border-blue-600 bg-blue-50/60 rounded-xl p-3 text-left transition">
+                            <div class="font-bold text-xs sm:text-sm text-slate-900">Классический</div>
+                            <div class="text-[11px] text-slate-600 mt-0.5">от 355 ₽/м²</div>
+                        </button>
+                        <button type="button" data-price="550" data-discount="20" data-name="Парящий потолок (скидка 20% + лента в подарок)" class="mat-btn border-2 border-slate-200 hover:border-slate-300 rounded-xl p-3 text-left transition relative">
+                            <span class="absolute -top-2 right-2 bg-rose-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">-20%</span>
+                            <div class="font-bold text-xs sm:text-sm text-slate-900">Парящий</div>
+                            <div class="text-[11px] text-slate-600 mt-0.5">Лента в подарок</div>
+                        </button>
+                        <button type="button" data-price="650" data-discount="25" data-name="Теневой профиль (скидка 25%)" class="mat-btn border-2 border-slate-200 hover:border-slate-300 rounded-xl p-3 text-left transition relative">
+                            <span class="absolute -top-2 right-2 bg-rose-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">-25%</span>
+                            <div class="font-bold text-xs sm:text-sm text-slate-900">Теневой</div>
+                            <div class="text-[11px] text-slate-600 mt-0.5">Идеальное примыкание</div>
+                        </button>
+                        <button type="button" data-price="750" data-discount="25" data-name="Потолок со световыми треками (скидка 25%)" class="mat-btn border-2 border-slate-200 hover:border-slate-300 rounded-xl p-3 text-left transition relative">
+                            <span class="absolute -top-2 right-2 bg-rose-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">-25%</span>
+                            <div class="font-bold text-xs sm:text-sm text-slate-900">С треками</div>
+                            <div class="text-[11px] text-slate-600 mt-0.5">Современный свет</div>
+                        </button>
+                        <button type="button" data-price="590" data-discount="0" data-name="Многоуровневый / с перфорацией" class="mat-btn border-2 border-slate-200 hover:border-slate-300 rounded-xl p-3 text-left transition">
+                            <div class="font-bold text-xs sm:text-sm text-slate-900">Многоуровневый</div>
+                            <div class="text-[11px] text-slate-600 mt-0.5">Любая геометрия</div>
+                        </button>
+                        <button type="button" data-price="690" data-discount="0" data-name="Фактурный / Эксклюзивный" class="mat-btn border-2 border-slate-200 hover:border-slate-300 rounded-xl p-3 text-left transition">
+                            <div class="font-bold text-xs sm:text-sm text-slate-900">Эксклюзивный</div>
+                            <div class="text-[11px] text-slate-600 mt-0.5">от 385 ₽/м²</div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Площадь -->
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label for="area-range" class="text-sm font-extrabold text-slate-800">2. Площадь помещения</label>
+                        <div class="bg-blue-600 text-white font-extrabold text-sm px-3 py-1 rounded-lg">
+                            <span id="area-val">18</span> м²
+                        </div>
+                    </div>
+                    <input type="range" id="area-range" min="4" max="120" value="18" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                        <span>4 м² (санузел)</span>
+                        <span>45 м² (квартира)</span>
+                        <span>120 м² (коттедж)</span>
+                    </div>
+                </div>
+
+                <!-- 3. Освещение и углы -->
+                <div>
+                    <label class="block text-sm font-extrabold text-slate-800 mb-2.5">3. Освещение и параметры комнаты</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-200">
+                            <div>
+                                <div class="text-xs font-bold text-slate-800">Точечные светильники</div>
+                                <div class="text-[11px] text-slate-500">Монтаж от 280 ₽/шт.</div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="changeCount('spots', -1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 font-bold text-slate-700 hover:bg-slate-100">-</button>
+                                <span id="spots-val" class="w-5 text-center font-bold text-sm">6</span>
+                                <button type="button" onclick="changeCount('spots', 1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 font-bold text-slate-700 hover:bg-slate-100">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-200">
+                            <div>
+                                <div class="text-xs font-bold text-slate-800">Люстра (монтаж)</div>
+                                <div class="text-[11px] text-slate-500">С платформой</div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="changeCount('chandeliers', -1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 font-bold text-slate-700 hover:bg-slate-100">-</button>
+                                <span id="chandeliers-val" class="w-5 text-center font-bold text-sm">1</span>
+                                <button type="button" onclick="changeCount('chandeliers', 1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 font-bold text-slate-700 hover:bg-slate-100">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-200">
+                            <div>
+                                <div class="text-xs font-bold text-slate-800">Углы в помещении</div>
+                                <div class="text-[11px] text-slate-500">4 угла бесплатно</div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="changeCount('corners', -1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 font-bold text-slate-700 hover:bg-slate-100">-</button>
+                                <span id="corners-val" class="w-5 text-center font-bold text-sm">4</span>
+                                <button type="button" onclick="changeCount('corners', 1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 font-bold text-slate-700 hover:bg-slate-100">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-200">
+                            <div>
+                                <div class="text-xs font-bold text-slate-800">Обвод труб</div>
+                                <div class="text-[11px] text-slate-500">Аккуратный обход</div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="changeCount('pipes', -1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 font-bold text-slate-700 hover:bg-slate-100">-</button>
+                                <span id="pipes-val" class="w-5 text-center font-bold text-sm">1</span>
+                                <button type="button" onclick="changeCount('pipes', 1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 font-bold text-slate-700 hover:bg-slate-100">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Выбор подарка (реальные акции исполнителя) -->
+                <div>
+                    <label class="block text-sm font-extrabold text-slate-800 mb-2">4. Выберите ваш гарантированный подарок</label>
+                    <select id="gift-select" class="w-full p-3 rounded-xl border-2 border-emerald-500/50 bg-emerald-50/40 text-xs sm:text-sm font-bold text-slate-900 focus:outline-none focus:border-emerald-600">
+                        <option value="Светильники в подарок">🎁 Светильники в подарок при заказе</option>
+                        <option value="Люстра Feron 60 Вт в подарок">🎁 Люстра Feron 60 Вт в подарок</option>
+                        <option value="Карниз для штор в подарок">🎁 Карниз для штор в подарок</option>
+                        <option value="Подсветка карниза с пультом в подарок">🎁 Подсветка для карниза с пультом в подарок</option>
+                        <option value="Доп. скидка пенсионерам / новосёлам">🎁 Спецскидка пенсионерам и новосёлам</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Правая часть: Итог и захват заявки -->
+            <div class="p-5 sm:p-7 lg:col-span-5 bg-slate-900 text-white flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Честный расчет от производства</span>
+                        <span class="bg-emerald-500/20 text-emerald-400 text-[11px] font-bold px-2 py-0.5 rounded">Без посредников</span>
+                    </div>
+                    <div class="flex items-baseline gap-2.5 mb-2">
+                        <span class="text-3xl sm:text-4xl font-black text-white" id="total-price">8 920 ₽</span>
+                        <span class="text-sm text-slate-400 line-through" id="old-price">11 400 ₽</span>
+                    </div>
+                    <p class="text-xs text-slate-400 mb-5">Минимальный заказ от 5 000 ₽. Поэтапная оплата или постоплата после приёмки.</p>
+
+                    <!-- Бонусы и гарантии со скрина -->
+                    <div class="bg-slate-800/90 border border-slate-700 rounded-xl p-3.5 space-y-2 mb-5">
+                        <div class="flex items-start gap-2 text-xs text-emerald-400 font-semibold">
+                            <span>✓</span> <span id="selected-gift-text">Подарок: Светильники в подарок</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-xs text-emerald-400 font-semibold">
+                            <span>✓</span> Доп. скидка 1 000 ₽ уже учтена в расчете
+                        </div>
+                        <div class="flex items-start gap-2 text-xs text-slate-300">
+                            <span>✓</span> Выезд замерщика сегодня — 0 ₽ (монтаж завтра)
+                        </div>
+                        <div class="flex items-start gap-2 text-xs text-slate-300">
+                            <span>✓</span> Официальный договор с круглой печатью и гарантия
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма отправки -->
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-xs text-slate-300 mb-1">Ваш телефон для фиксации цены и подарка:</label>
+                        <input type="tel" id="client-phone" placeholder="+7 (___) ___-__-__" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500">
+                    </div>
+                    
+                    <button type="button" onclick="sendToWhatsApp()" class="w-full py-3.5 px-4 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black rounded-xl text-sm transition shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+                        <span>Зафиксировать цену в WhatsApp</span>
+                    </button>
+                    
+                    <p class="text-[11px] text-center text-slate-400">
+                        Отвечаем за 15–30 минут • Цена на замере не вырастет
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Преимущества из объявления -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mt-7">
+            <div class="bg-white p-4 rounded-xl border border-slate-200/80">
+                <div class="font-extrabold text-sm text-slate-900 mb-1">Безопасно и сертифицировано</div>
+                <div class="text-xs text-slate-600">Полотна без запаха (сертификаты РФ, санэпидстанция), выдерживают до 100 л воды на м². Безопасные композитные баллоны.</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200/80">
+                <div class="font-extrabold text-sm text-slate-900 mb-1">Чистый монтаж без пыли</div>
+                <div class="text-xs text-slate-600">Работаем без перестановки мебели, аккуратно относимся к ремонту и убираем за собой весь мусор.</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200/80">
+                <div class="font-extrabold text-sm text-slate-900 mb-1">Штат 20+ мастеров</div>
+                <div class="text-xs text-slate-600">Опыт более 10 лет. Берём срочные заказы в день обращения — замер сегодня, монтаж уже завтра.</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200/80">
+                <div class="font-extrabold text-sm text-slate-900 mb-1">Ремонт и слив воды</div>
+                <div class="text-xs text-slate-600">Слив воды при затоплении от 1 200 ₽, ремонт порезов от 285 ₽, замена и демонтаж полотен.</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // ==========================================
+        // НАСТРОЙКИ КОМПАНИИ (МЕНЯТЬ ТУТ)
+        // ==========================================
+        const CONFIG = {
+            brandName: "ПОТОЛКИ БЕЗ ПОСРЕДНИКОВ",
+            cityText: "Москва (Новогиреево, Перово, вся МО) • Опыт 10+ лет",
+            phoneDisplay: "+7 (999) 000-00-00",
+            whatsappNumber: "79990000000" // Номер заказчика в формате 79XXXXXXXXX
+        };
+
+        document.getElementById('brand-name').innerText = CONFIG.brandName;
+        document.getElementById('brand-city').innerText = CONFIG.cityText;
+        const phoneLink = document.getElementById('brand-phone-link');
+        phoneLink.innerText = CONFIG.phoneDisplay;
+        phoneLink.href = "tel:+" + CONFIG.whatsappNumber;
+
+        let state = {
+            materialPrice: 355,
+            materialName: "Классический ПВХ (матовый/сатин/глянец)",
+            area: 18,
+            spots: 6,
+            chandeliers: 1,
+            corners: 4,
+            pipes: 1,
+            gift: "Светильники в подарок"
+        };
+
+        document.querySelectorAll('.mat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.mat-btn').forEach(b => {
+                    b.classList.remove('border-blue-600', 'bg-blue-50/60');
+                    b.classList.add('border-slate-200');
+                });
+                btn.classList.remove('border-slate-200');
+                btn.classList.add('border-blue-600', 'bg-blue-50/60');
+                
+                state.materialPrice = parseInt(btn.dataset.price);
+                state.materialName = btn.dataset.name;
+                calculate();
+            });
+        });
+
+        document.getElementById('area-range').addEventListener('input', (e) => {
+            state.area = parseInt(e.target.value);
+            document.getElementById('area-val').innerText = state.area;
+            calculate();
+        });
+
+        document.getElementById('gift-select').addEventListener('change', (e) => {
+            state.gift = e.target.value;
+            document.getElementById('selected-gift-text').innerText = "Подарок: " + state.gift;
+        });
+
+        function changeCount(key, delta) {
+            const minVal = key === 'corners' ? 4 : 0;
+            state[key] = Math.max(minVal, state[key] + delta);
+            document.getElementById(`${key}-val`).innerText = state[key];
+            calculate();
+        }
+
+        function calculate() {
+            const baseCost = state.area * state.materialPrice;
+            const spotsCost = state.spots * 350;
+            const chandeliersCost = state.chandeliers * 700;
+            const extraCornersCost = Math.max(0, state.corners - 4) * 200;
+            const pipesCost = state.pipes * 300;
+
+            let rawTotal = baseCost + spotsCost + chandeliersCost + extraCornersCost + pipesCost;
+            // Учитываем акционную скидку 1000 руб, но не ниже минимального заказа 5000 руб
+            const total = Math.max(5000, rawTotal - 1000);
+            const oldTotal = Math.round(total * 1.25);
+
+            document.getElementById('total-price').innerText = total.toLocaleString('ru-RU') + ' ₽';
+            document.getElementById('old-price').innerText = oldTotal.toLocaleString('ru-RU') + ' ₽';
+            
+            return { total };
+        }
+
+        function sendToWhatsApp() {
+            const clientPhone = document.getElementById('client-phone').value.trim();
+            if (!clientPhone) {
+                alert('Введите ваш номер телефона для фиксации скидки 1 000 ₽ и подарка.');
+                document.getElementById('client-phone').focus();
+                return;
+            }
+
+            const { total } = calculate();
+            const text = `Здравствуйте! Сделал расчет натяжного потолка на сайте:\n` +
+                `• Тип: ${state.materialName}\n` +
+                `• Площадь: ${state.area} м²\n` +
+                `• Светильники: ${state.spots} шт., люстры: ${state.chandeliers} шт.\n` +
+                `• Углы: ${state.corners} шт., трубы: ${state.pipes} шт.\n` +
+                `• Выбранный подарок: ${state.gift}\n` +
+                `• Смета со скидкой 1 000 ₽: ${total.toLocaleString('ru-RU')} ₽\n\n` +
+                `Мой телефон: ${clientPhone}. Хочу записаться на бесплатный замер.`;
+
+            const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        calculate();
+    </script>
+</body>
+</html>
